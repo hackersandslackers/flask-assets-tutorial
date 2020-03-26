@@ -10,7 +10,7 @@
 
 ![Flask Assets Tutorial](https://github.com/hackersandslackers/flask-assets-tutorial/blob/master/.github/flask-assets@2x.jpg?raw=true)
 
-Structure your Flask apps in a scalable and intelligent way using Blueprints. This repository contains source code for the accompanying tutorial on Hackers and Slackers: https://hackersandslackers.com/flask-blueprints/
+Structure your Flask apps in a scalable and intelligent way using Blueprints. This repository contains source code for the accompanying tutorial on Hackers and Slackers: https://hackersandslackers.com/flask-assets
 
 ## Getting Started
 
