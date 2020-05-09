@@ -8,9 +8,13 @@
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/flask-assets-tutorial.svg?style=flat-square8&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-assets-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/flask-assets-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-assets-tutorial/network)
 
-![Flask Assets Tutorial](https://github.com/hackersandslackers/flask-assets-tutorial/.github/flask-assets@2x.jpg)
+![Flask Assets Tutorial](https://github.com/hackersandslackers/flask-assets-tutorial/blob/master/.github/flask-assets@2x.jpg?raw=true)
 
+<<<<<<< HEAD
 Build and code-split your frontend assets across Blueprints using Flask-Assets. Accompanying tutorial on Hackers and Slackers here: https://hackersandslackers.com/flask-assets/
+=======
+Structure your Flask apps in a scalable and intelligent way using Blueprints. This repository contains source code for the accompanying tutorial on Hackers and Slackers: https://hackersandslackers.com/flask-assets
+>>>>>>> 4df4daf539e3f82a9604ab064226669c931f58e4
 
 ## Installation
 
