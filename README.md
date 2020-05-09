@@ -10,30 +10,33 @@
 
 ![Flask Assets Tutorial](https://github.com/hackersandslackers/flask-assets-tutorial/.github/flask-assets@2x.jpg)
 
-Structure your Flask apps in a scalable and intelligent way using Blueprints. This repository contains source code for the accompanying tutorial on Hackers and Slackers: https://hackersandslackers.com/flask-blueprints/
+Build and code-split your frontend assets across Blueprints using Flask-Assets. Accompanying tutorial on Hackers and Slackers here: https://hackersandslackers.com/flask-assets/
 
-## Getting Started
+## Installation
 
-Installation is recommended with Pipenv:
+**Installation via `requirements.txt`**:
+
+```shell
+$ git clone https://github.com/hackersandslackers/fflask-assets-tutorial.git
+$ cd flask-assets-tutorial
+$ python3 -m venv myenv
+$ source myenv/bin/activate
+$ pip3 install -r requirements.txt
+$ flask run
+```
+
+**Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/flask-assets-tutorial.git
 $ cd flask-assets-tutorial
 $ pipenv shell
 $ pipenv update
-$ pip install lesscpy cssmin jsmin
-$ python3 main.py
+$ flask run
 ```
+-----
 
-Alternatively, try installing via **setup.py**:
-
-```shell
-$ git clone https://github.com/hackersandslackers/flask-assets-tutorial.git
-$ cd flask-assets-tutorial
-$ python3 setup.py install
-$ pip install lesscpy cssmin jsmin
-$ python3 main.py
-```
+**Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards more content.
 -----
 
 **Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards more content.

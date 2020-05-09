@@ -1,8 +1,9 @@
 """Compile static assets."""
+from flask import current_app as app
 from flask_assets import Bundle
 
 
-def compile_assets(assets):
+def compile_static_assets(assets):
     """Configure and build asset bundles."""
     main_style_bundle = Bundle('src/less/*.less',
                                'main_bp/homepage.less',
@@ -20,6 +21,8 @@ def compile_assets(assets):
     assets.register('main_styles', main_style_bundle)
     assets.register('main_js', main_js_bundle)
     assets.register('admin_styles', admin_style_bundle)
-    main_style_bundle.build()
-    main_js_bundle.build()
-    admin_style_bundle.build()
+    if app.config['FLASK_ENV'] == 'development':  # Only rebuild bundles in development
+        main_style_bundle.build()
+        main_js_bundle.build()
+        admin_style_bundle.build()
+    return assets
