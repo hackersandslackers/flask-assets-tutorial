@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "Flask Assets Tutorial"
+name = "flask_assets_tutorial"
 version = "0.1.0"
 description = "Flask application which compiles ands serves frontend assets with Flask-Assets."
 authors = ["Todd Birchard <toddbirchard@gmail.com>"]
@@ -19,12 +19,12 @@ keywords = ["Flask",
 python = "^3.8"
 flask = "*"
 flask-assets = "*"
-python-dotenv = "*"
-
-[tool.poetry.dev-dependencies]
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"
+python-dotenv = "*"
+
+[tool.poetry.dev-dependencies]
 pytest = "*"
 
 [build-system]

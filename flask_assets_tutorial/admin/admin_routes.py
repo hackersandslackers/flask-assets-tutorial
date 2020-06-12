@@ -7,13 +7,15 @@ admin_bp = Blueprint(
     __name__,
     template_folder='templates',
     static_folder='static'
-)  # Blueprint Configuration
+)
 
 
 @admin_bp.route('/dashboard', methods=['GET'])
 def dashboard():
     """Admin dashboard route."""
-    return render_template('dashboard.jinja2',
-                           title='Admin Dashboard | Flask-Blueprint Tutorial',
-                           template='dashboard-static account',
-                           body="Account")
+    return render_template(
+        'dashboard.jinja2',
+        title='Admin Dashboard | Flask-Blueprint Tutorial',
+        template='dashboard-static account',
+        body="Account"
+    )

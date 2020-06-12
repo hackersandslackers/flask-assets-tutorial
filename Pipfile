@@ -4,14 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-Lesscpy = "*"
-CSSMin = "*"
-JSMin = "*"
 
 [packages]
 Flask = "*"
 Flask-Assets = "*"
 Python-Dotenv = "*"
+Lesscpy = "*"
+CSSMin = "*"
+JSMin = "*"
 
 [requires]
 python_version = "3.8"
