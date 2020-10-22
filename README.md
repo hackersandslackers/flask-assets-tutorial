@@ -12,49 +12,30 @@
 
 Build and code-split your frontend assets across Blueprints using Flask-Assets. Accompanying tutorial on Hackers and Slackers here: https://hackersandslackers.com/flask-assets/
 
-## Installation
+# Getting Started
 
-**Installation via `requirements.txt`**:
+Get set up locally in two steps:
 
-```shell
-$ git clone https://github.com/hackersandslackers/fflask-assets-tutorial.git
-$ cd flask-assets-tutorial
-$ python3 -m venv myenv
-$ source myenv/bin/activate
-$ pip3 install -r requirements.txt
-$ flask run
-```
-
-**Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
-
-```shell
-$ git clone https://github.com/hackersandslackers/flask-assets-tutorial.git
-$ cd flask-assets-tutorial
-$ pipenv shell
-$ pipenv update
-$ flask run
-```
-
-**Installation via [Poetry](https://python-poetry.org/)**:
-
-```shell
-$ git clone https://github.com/hackersandslackers/flask-assets-tutorial.git
-$ cd flask-assets-tutorial
-$ poetry shell
-$ poetry update
-$ poetry run
-```
-
-## Usage
+### Environment Variables
 
 Replace the values in **.env.example** with your values and rename this file to **.env**:
 
-* `FLASK_APP`: Entry point of your application (should be `wsgi.py`).
-* `FLASK_ENV`: The environment to run your app in (either `development` or `production`).
+* `FLASK_APP`: Entry point of your application; should be `wsgi.py`.
+* `FLASK_ENV`: The environment in which run your application; either `development` or `production`.
 * `SECRET_KEY`: Randomly generated string of characters used to encrypt your app's data.
 * `LESS_BIN`: Path to your local LESS installation via `which lessc`.
 
 *Remember never to commit secrets saved in .env files to Github.*
+
+### Installation
+
+Get up and running with `make deploy`:
+
+```shell
+$ git clone https://github.com/hackersandslackers/flask-assets-tutorial.git
+$ cd flask-assets-tutorial
+$ make deploy
+``` 
 
 -----
 
