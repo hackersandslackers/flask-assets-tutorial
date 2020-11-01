@@ -23,7 +23,7 @@ pytest==6.1.1
 python-dotenv==0.14.0
 regex==2020.10.15
 six==1.15.0
-toml==0.10.1
+toml==0.10.2
 typed-ast==1.4.1
 typing-extensions==3.7.4.3
 webassets==2.0
