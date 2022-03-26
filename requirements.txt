@@ -11,7 +11,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.2
 jsmin==2.2.2
 lesscpy==0.14.0
-MarkupSafe==1.1.1
+MarkupSafe==2.1.1
 mypy-extensions==0.4.3
 packaging==20.4
 pathspec==0.8.0
