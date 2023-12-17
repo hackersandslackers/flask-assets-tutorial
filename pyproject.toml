@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask_assets_tutorial"
-version = "0.1.0"
+version = "0.1.1"
 description = "Flask application which compiles ands serves frontend assets with Flask-Assets."
 authors = ["Todd Birchard <toddbirchard@gmail.com>"]
 maintainers = ["Todd Birchard <toddbirchard@gmail.com>"]
@@ -9,27 +9,20 @@ readme = "README.md"
 homepage = "https://hackersandslackers.com/flask-assets/"
 repository = "https://github.com/hackersandslackers/flask-assets-tutorial/"
 documentation = "https://hackersandslackers.com/flask-assets/"
-keywords = [
-    "Flask",
-    "Flask-Assets",
-    "Bundles",
-    "Frontend",
-    "Tutorial"
-]
+keywords = ["Flask", "Flask-Assets", "Bundles", "Frontend", "Tutorial"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.10,<4.0"
 flask = "*"
 flask-assets = "*"
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"
 python-dotenv = "*"
-
-[tool.poetry.dev-dependencies]
 pytest = "*"
-black = "^20.8b1"
-isort = "^5.6.4"
+black = "*"
+isort = "*"
+gunicorn = "*"
 
 [tool.poetry.scripts]
 run = "wsgi:app"
@@ -38,6 +31,18 @@ run = "wsgi:app"
 issues = "https://github.com/hackersandslackers/flask-assets-tutorial/issues"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.masonry.api"
 
+[tool.black]
+line-length = 120
+target-version = ['py310']
+src_paths = ["flask_assets_tutorial", "config", "wsgi"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["flask_login_tutorial", "config", "wsgi"]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "C0103,C0301,W0703,W0621"
