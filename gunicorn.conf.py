@@ -24,9 +24,4 @@ if ENVIRONMENT == "production":
     accesslog = "/var/log/flaskassets/access.log"
     errorlog = "/var/log/flaskassets/error.log"
     loglevel = "trace"
-    dogstatsd_tags = [
-        "env:prod",
-        f"host:{socket.gethostbyname(socket.gethostname())}",
-        "service:flaskassets",
-        "language:python",
-    ]
+    dogstatsd_tags = "env:prod,service:flaskassets,language:python"
