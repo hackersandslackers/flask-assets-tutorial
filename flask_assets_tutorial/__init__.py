@@ -15,9 +15,9 @@ def create_app():
 
     with app.app_context():
         # Import parts of our flask_assets_tutorial
-        from .admin import admin_routes
+        from .admin import routes as admin_routes
         from .assets import compile_static_assets, compile_stylesheet_bundles
-        from .main import main_routes
+        from .main import routes as main_routes
 
         # Register Blueprints
         app.register_blueprint(admin_routes.admin_blueprint)

@@ -144,6 +144,24 @@ Flask = ">=0.8"
 webassets = ">=2.0"
 
 [[package]]
+name = "flask-sock"
+version = "0.7.0"
+description = "WebSocket support for Flask"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "flask-sock-0.7.0.tar.gz", hash = "sha256:e023b578284195a443b8d8bdb4469e6a6acf694b89aeb51315b1a34fcf427b7d"},
+    {file = "flask_sock-0.7.0-py3-none-any.whl", hash = "sha256:caac4d679392aaf010d02fabcf73d52019f5bdaf1c9c131ec5a428cb3491204a"},
+]
+
+[package.dependencies]
+flask = ">=2"
+simple-websocket = ">=0.5.1"
+
+[package.extras]
+docs = ["sphinx"]
+
+[[package]]
 name = "gunicorn"
 version = "21.2.0"
 description = "WSGI HTTP Server for UNIX"
@@ -162,6 +180,17 @@ eventlet = ["eventlet (>=0.24.1)"]
 gevent = ["gevent (>=1.4.0)"]
 setproctitle = ["setproctitle"]
 tornado = ["tornado (>=0.2)"]
+
+[[package]]
+name = "h11"
+version = "0.14.0"
+description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "h11-0.14.0-py3-none-any.whl", hash = "sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761"},
+    {file = "h11-0.14.0.tar.gz", hash = "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d"},
+]
 
 [[package]]
 name = "iniconfig"
@@ -420,6 +449,23 @@ files = [
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "simple-websocket"
+version = "1.0.0"
+description = "Simple WebSocket server and client for Python"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "simple-websocket-1.0.0.tar.gz", hash = "sha256:17d2c72f4a2bd85174a97e3e4c88b01c40c3f81b7b648b0cc3ce1305968928c8"},
+    {file = "simple_websocket-1.0.0-py3-none-any.whl", hash = "sha256:1d5bf585e415eaa2083e2bcf02a3ecf91f9712e7b3e6b9fa0b461ad04e0837bc"},
+]
+
+[package.dependencies]
+wsproto = "*"
+
+[package.extras]
+docs = ["sphinx"]
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -469,7 +515,21 @@ MarkupSafe = ">=2.1.1"
 [package.extras]
 watchdog = ["watchdog (>=2.3)"]
 
+[[package]]
+name = "wsproto"
+version = "1.2.0"
+description = "WebSockets state-machine based protocol implementation"
+optional = false
+python-versions = ">=3.7.0"
+files = [
+    {file = "wsproto-1.2.0-py3-none-any.whl", hash = "sha256:b9acddd652b585d75b20477888c56642fdade28bdfd3579aa24a4d2c037dd736"},
+    {file = "wsproto-1.2.0.tar.gz", hash = "sha256:ad565f26ecb92588a3e43bc3d96164de84cd9902482b130d0ddbaa9664a85065"},
+]
+
+[package.dependencies]
+h11 = ">=0.9.0,<1"
+
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<4.0"
-content-hash = "1cefee7201afdf1c906904384c9dbee5da986795fd191749b2e1b573b07ab3cd"
+content-hash = "735ee3aa09af1facbd4000b4b1d1fe724b430be6eb7d83ed0d1979aaaf7f04ac"

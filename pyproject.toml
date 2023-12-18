@@ -23,6 +23,7 @@ pytest = "*"
 black = "*"
 isort = "*"
 gunicorn = "*"
+flask-sock = "^0.7.0"
 
 [tool.poetry.scripts]
 run = "wsgi:app"
