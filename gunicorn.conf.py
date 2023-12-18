@@ -1,7 +1,12 @@
 """Gunicorn configuration file."""
 import socket
+from os import environ, path
+from dotenv import load_dotenv
 
-from config import Config
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, ".env"))
+
+ENVIRONMENT = environ.get("ENVIRONMENT")
 
 proc_name = "flaskassets"
 wsgi_app = "wsgi:app"
@@ -9,13 +14,12 @@ bind = "unix:flask.sock"
 threads = 4
 workers = 2
 
-if Config.ENVIRONMENT == "development":
+if ENVIRONMENT == "development":
     reload = True
     workers = 1
     threads = 1
 
-
-if Config.ENVIRONMENT == "production":
+if ENVIRONMENT == "production":
     daemon = True
     accesslog = "/var/log/flaskassets/access.log"
     errorlog = "/var/log/flaskassets/error.log"
