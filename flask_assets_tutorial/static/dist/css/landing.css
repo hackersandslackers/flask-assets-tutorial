@@ -1,6 +1,6 @@
 nav {
   background: #fff;
-  padding: 30px;
+  padding: 15px 30px;
   width: auto;
   margin-bottom: 40px;
   box-shadow: 0 0 5px #bec6cf;
@@ -18,9 +18,10 @@ nav .nav-wrapper .left-nav {
   justify-content: space-between;
   align-items: center;
 }
-nav .nav-wrapper .left-nav .logo {
-  width: 30px;
-  margin-right: 40px;
+nav .nav-wrapper .left-nav .logo,
+nav .nav-wrapper .left-nav img {
+  width: 40px;
+  margin-right: 20px;
 }
 nav .nav-wrapper .left-nav a {
   margin-right: 20px;
@@ -99,7 +100,8 @@ nav .nav-wrapper .left-nav {
   justify-content: space-between;
   align-items: center;
 }
-nav .nav-wrapper .left-nav .logo {
+nav .nav-wrapper .left-nav .logo,
+nav .nav-wrapper .left-nav img {
   width: 40px;
   margin-right: 20px;
 }
