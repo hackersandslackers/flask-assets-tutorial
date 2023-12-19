@@ -3,11 +3,13 @@ from flask import current_app as app
 from flask_assets import Bundle, Environment
 
 
-def compile_stylesheet_bundles(assets: Environment):
+def compile_stylesheet_bundles(assets: Environment) -> Environment:
     """
     Create minified CSS bundles from LESS styles.
 
     :param Environment assets: Flask `environment` for static assets.
+
+    :returns: Environment
     """
     # Main Stylesheets Bundle
     main_style_bundle = Bundle(
@@ -33,11 +35,13 @@ def compile_stylesheet_bundles(assets: Environment):
     return assets
 
 
-def compile_static_assets(assets: Environment):
+def compile_static_assets(assets: Environment) -> Environment:
     """
     Create minified JS bundles from raw Javascript files.
 
     :param Environment assets: Flask `environment` for static assets.
+
+    :returns: Environment
     """
     main_js_bundle = Bundle("src/js/main.js", filters="jsmin", output="dist/js/main.min.js")  # Main JavaScript Bundle
     assets.register("main_js", main_js_bundle)

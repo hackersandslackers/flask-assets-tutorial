@@ -1,6 +1,8 @@
 PROJECT_NAME := $(shell basename $CURDIR)
 VIRTUAL_ENV := $(CURDIR)/.venv
 LOCAL_PYTHON := $(VIRTUAL_ENV)/bin/python3
+LOCAL_NODE_JS := $(shell which node)
+LOCAL_LESS_JS := $(shell which lessc)
 
 define HELP
 Manage $(PROJECT_NAME). Usage:
@@ -23,12 +25,19 @@ all help:
 	@echo "$$HELP"
 
 env: $(VIRTUAL_ENV)
+node-env: $(LOCAL_NODE_JS)
 
 $(VIRTUAL_ENV):
 	if [ ! -d $(VIRTUAL_ENV) ]; then \
 		echo "Creating Python virtual env in \`${VIRTUAL_ENV}\`"; \
 		python3 -m venv $(VIRTUAL_ENV); \
-	fi
+	fi;
+
+$(LOCAL_NODE_JS):
+	if [ ! -f $(LOCAL_LESS_JS) ]; then \
+		echo "Installing lessc"; \
+		npm install -g lessc; \
+	fi;
 
 .PHONY: run
 run: env

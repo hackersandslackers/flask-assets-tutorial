@@ -18,6 +18,7 @@ if ENVIRONMENT == "development":
     reload = True
     workers = 1
     threads = 1
+    bind = ["127.0.0.1:8000"]
 
 if ENVIRONMENT == "production":
     daemon = True

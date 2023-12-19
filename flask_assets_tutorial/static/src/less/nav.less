@@ -2,10 +2,10 @@
 
 nav {
     background: #fff;
-    padding: 30px;
+    padding: 15px 30px;
     width: auto;
     margin-bottom: 40px;
-    box-shadow: 0 0 5px #bec6cf;
+    box-shadow: 0 0 5px @box-shadow-nav;
 
     .nav-wrapper {
       max-width: 900px;
@@ -20,10 +20,11 @@ nav {
         justify-content: space-between;
         align-items: center;
 
-        img {
-          width: 30px;
-          margin-right: 40px;
+        .logo {
+          width: 40px;
+          margin-right: 20px;
         }
+
         a {
           margin-right: 20px;
           font-weight: 400;
@@ -32,7 +33,7 @@ nav {
     }
 
     a {
-        color: #4d545d;
+        color: @nav-link-color;
         transition: @transition;
         text-decoration: none;
 
