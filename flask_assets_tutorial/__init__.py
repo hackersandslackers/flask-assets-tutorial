@@ -8,7 +8,6 @@ def create_app():
     app = Flask(__name__, instance_relative_config=False)
     app.config.from_object("config.Config")
     assets = Environment()
-    assets.init_app(app)
 
     # Initialize plugins
     assets.init_app(app)
@@ -16,7 +15,7 @@ def create_app():
     with app.app_context():
         # Import parts of our flask_assets_tutorial
         from .admin import routes as admin_routes
-        from .assets import compile_static_assets, compile_stylesheet_bundles
+        from .assets import compile_js_assets, compile_stylesheet_bundles
         from .main import routes as main_routes
 
         # Register Blueprints
@@ -25,6 +24,6 @@ def create_app():
 
         # Compile static assets
         compile_stylesheet_bundles(assets)
-        compile_static_assets(assets)
+        compile_js_assets(assets)
 
         return app

@@ -35,7 +35,7 @@ def compile_stylesheet_bundles(assets: Environment) -> Environment:
     return assets
 
 
-def compile_static_assets(assets: Environment) -> Environment:
+def compile_js_assets(assets: Environment) -> Environment:
     """
     Create minified JS bundles from raw Javascript files.
 
@@ -45,6 +45,6 @@ def compile_static_assets(assets: Environment) -> Environment:
     """
     main_js_bundle = Bundle("src/js/main.js", filters="jsmin", output="dist/js/main.min.js")  # Main JavaScript Bundle
     assets.register("main_js", main_js_bundle)
-    if app.config["ENVIRONMENT"] != "production":
+    if app.config["ENVIRONMENT"] == "development":
         main_js_bundle.build()
     return assets
