@@ -1,17 +1,27 @@
+/* Breakpoints */
 nav {
   background: #fff;
-  padding: 15px 30px;
-  width: auto;
-  margin-bottom: 40px;
+  padding: 25px 0;
+  margin: 0 auto;
   box-shadow: 0 0 5px #bec6cf;
 }
+@media (max-width: 600px) {
+  nav {
+    box-shadow: unset;
+  }
+}
 nav .nav-wrapper {
-  max-width: 900px;
+  max-width: 85vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: auto;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  nav .nav-wrapper {
+    max-width: 90vw;
+  }
 }
 nav .nav-wrapper .left-nav {
   display: flex;
@@ -45,11 +55,54 @@ html {
   background: #f0f0f0;
   height: 100%;
 }
+body .container,
+html .container {
+  width: 850px;
+  max-width: 80vw;
+  min-height: 100%;
+  background: white;
+  margin: 40px auto 0;
+  padding: 3vw;
+  box-shadow: 0 0 5px #bec6cf;
+}
+@media (max-width: 600px) {
+  body .container,
+  html .container {
+    width: 90vw;
+    max-width: unset;
+    padding: 5vw;
+    margin: 0;
+    box-shadow: 0 0 3px #bec6cf;
+  }
+}
+body .container .attribute-value,
+html .container .attribute-value {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+body .container h1,
+html .container h1 {
+  margin-top: 0;
+  font-size: 2.5em;
+  line-height: 1;
+  color: #393b40;
+}
+body .container p,
+html .container p {
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
 ul {
   list-style: none;
   width: 50%;
   border: 1px solid #e6e6e6;
   padding: 10px;
+}
+@media (max-width: 600px) {
+  ul {
+    width: unset;
+  }
 }
 ul li {
   display: flex;
@@ -64,36 +117,31 @@ ul li:last-of-type {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.container {
-  max-width: 847px;
-  margin: 0 auto;
-  min-height: 100%;
-  background: white;
-  padding: 40px;
-  box-shadow: 0 0 5px #bec6cf;
-}
-.container .attribute-value {
-  font-weight: 300;
-  font-size: 0.9em;
-}
-h1 {
-  margin-top: 0;
-}
 
+/* Breakpoints */
 nav {
   background: #fff;
-  padding: 15px 30px;
-  width: auto;
-  margin-bottom: 40px;
+  padding: 25px 0;
+  margin: 0 auto;
   box-shadow: 0 0 5px #bec6cf;
 }
+@media (max-width: 600px) {
+  nav {
+    box-shadow: unset;
+  }
+}
 nav .nav-wrapper {
-  max-width: 900px;
+  max-width: 85vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: auto;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  nav .nav-wrapper {
+    max-width: 90vw;
+  }
 }
 nav .nav-wrapper .left-nav {
   display: flex;
@@ -119,6 +167,7 @@ nav a:hover {
   opacity: 0.7;
 }
 
+/* Breakpoints */
 
 p {
   width: 100%;

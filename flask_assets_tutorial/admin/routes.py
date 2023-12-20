@@ -9,7 +9,8 @@ def dashboard():
     """Admin dashboard route."""
     return render_template(
         "dashboard.jinja2",
-        title="Admin Dashboard | Flask-Blueprint Tutorial",
+        title="Admin Dashboard",
         template="dashboard-static account",
-        body="Account",
+        body="This is the admin dashboard.",
+        logged_in=True,
     )

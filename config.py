@@ -17,7 +17,6 @@ class Config:
     FLASK_APP = "wsgi.py"
     SECRET_KEY = environ.get("SECRET_KEY")
     FLASK_DEBUG = environ.get("FLASK_DEBUG")
-    SOCK_SERVER_OPTIONS = {"ping_interval": 25}
 
     # Flask-Assets
     LESS_BIN = environ.get("LESS_BIN")

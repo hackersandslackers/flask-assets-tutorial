@@ -10,9 +10,16 @@
 </head>
 
 <body class="{{template}}">
+  {% if logged_in %}
+    {% include "navigation-loggedin.jinja2" %}
+  {% else %}
+    {% include "navigation-default.jinja2" %}
+  {% endif %}
 
-  {% block content %}{% endblock %}
-
+  <div class="container">
+      {% block content %}{% endblock %}
+  </div>
+  
   {# Scripts #}
   <script src="{{ url_for('static', filename='dist/js/main.min.js') }}"></script>
   {% block additionalscripts %}{% endblock %}
