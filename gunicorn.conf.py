@@ -1,4 +1,5 @@
 """Gunicorn configuration file."""
+
 import socket
 from os import environ, path
 
@@ -23,7 +24,7 @@ if ENVIRONMENT == "development":
 
 if ENVIRONMENT == "production":
     daemon = True
-    accesslog = "/var/log/flaskassets/access.log"
+    accesslog = "/var/log/flaskassets/info.log"
     errorlog = "/var/log/flaskassets/error.log"
     loglevel = "trace"
-    dogstatsd_tags = "env:prod,service:flaskassets,language:python"
+    dogstatsd_tags = "env:prod,service:flaskassets,language:python,type:tutorial"

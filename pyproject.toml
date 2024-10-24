@@ -24,6 +24,8 @@ black = "*"
 isort = "*"
 gunicorn = "*"
 flask-sock = "*"
+flake8 = "7.1.1"
+loguru = "^0.7.2"
 
 [tool.poetry.scripts]
 run = "wsgi:app"
@@ -32,18 +34,17 @@ run = "wsgi:app"
 issues = "https://github.com/hackersandslackers/flask-assets-tutorial/issues"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 120
 target-version = ['py310']
-src_paths = ["flask_assets_tutorial", "config", "wsgi"]
 
 [tool.isort]
 profile = "black"
 multi_line_output = 3
-src_paths = ["flask_login_tutorial", "config", "wsgi"]
+src_paths = ["flask_assets_tutorial", "config", "wsgi"]
 
 [tool.pylint.'MESSAGES CONTROL']
 disable = "C0103,C0301,W0703,W0621"

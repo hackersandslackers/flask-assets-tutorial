@@ -1,5 +1,7 @@
 """Routes for main pages."""
+
 from flask import Blueprint, render_template
+from log import LOGGER
 
 main_blueprint = Blueprint("main_blueprint", __name__, template_folder="templates", static_folder="static")
 
@@ -7,6 +9,7 @@ main_blueprint = Blueprint("main_blueprint", __name__, template_folder="template
 @main_blueprint.route("/", methods=["GET"])
 def home():
     """Home page route."""
+    LOGGER.info("Home page rendered by user.")
     return render_template(
         "index.jinja2",
         title="Home",
@@ -19,6 +22,7 @@ def home():
 @main_blueprint.route("/about", methods=["GET"])
 def about():
     """About page route."""
+    LOGGER.info("About page rendered by user.")
     return render_template(
         "index.jinja2",
         title="About",
@@ -31,6 +35,7 @@ def about():
 @main_blueprint.route("/etc", methods=["GET"])
 def etc():
     """Etc page route."""
+    LOGGER.info("Etc. page rendered by user.")
     return render_template(
         "index.jinja2",
         title="Etc.",
