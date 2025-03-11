@@ -9,10 +9,16 @@ readme = "README.md"
 homepage = "https://hackersandslackers.com/flask-assets/"
 repository = "https://github.com/hackersandslackers/flask-assets-tutorial/"
 documentation = "https://hackersandslackers.com/flask-assets/"
-keywords = ["Flask", "Flask-Assets", "Bundles", "Frontend", "Tutorial"]
+keywords = [
+    "Flask",
+    "Flask-Assets",
+    "Bundles",
+    "Frontend",
+    "Tutorial"
+]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<4.0"
+python = ">=3.12,<4.0"
 flask = "*"
 flask-assets = "*"
 lesscpy = "*"
@@ -34,17 +40,25 @@ run = "wsgi:app"
 issues = "https://github.com/hackersandslackers/flask-assets-tutorial/issues"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.1,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.black]
-line-length = 120
-target-version = ['py310']
+[tool.poetry.plugins]
+
+[tool.poetry.plugins."poetry.application.plugin"]
+export = "poetry_plugin_export.plugins:ExportApplicationPlugin"
 
 [tool.isort]
 profile = "black"
-multi_line_output = 3
-src_paths = ["flask_assets_tutorial", "config", "wsgi"]
+src_paths = [
+    "flask_assets_tutorial",
+    "config",
+    "log"
+]
 
 [tool.pylint.'MESSAGES CONTROL']
 disable = "C0103,C0301,W0703,W0621"
+
+[tool.black]
+line-length = 120
+target-version = ['py312']

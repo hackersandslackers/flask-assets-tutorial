@@ -1,6 +1,7 @@
 """Routes for logged-in account pages."""
 
 from flask import Blueprint, render_template
+
 from log import LOGGER
 
 admin_blueprint = Blueprint("admin_blueprint", __name__, template_folder="templates", static_folder="static")

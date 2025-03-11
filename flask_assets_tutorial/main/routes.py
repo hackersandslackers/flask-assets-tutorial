@@ -1,6 +1,7 @@
 """Routes for main pages."""
 
 from flask import Blueprint, render_template
+
 from log import LOGGER
 
 main_blueprint = Blueprint("main_blueprint", __name__, template_folder="templates", static_folder="static")
