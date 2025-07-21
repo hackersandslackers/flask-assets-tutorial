@@ -12,7 +12,7 @@ ENVIRONMENT = environ.get("ENVIRONMENT")
 proc_name = "flaskassets"
 wsgi_app = "wsgi:app"
 bind = "unix:flask.sock"
-threads = 4
+threads = 2
 workers = 2
 
 if ENVIRONMENT == "development":

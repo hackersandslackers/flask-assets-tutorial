@@ -11,16 +11,17 @@ html {
   height: 100%;
 
   .container {
-    width: 850px;
-    max-width: 80vw;
-    min-height: 100%;
+    width: @body-width-fullscreen;
+    max-width: @body-width-fullscreen;
+    height: 70%;
     background: white;
     margin: 40px auto 0;
     padding: 40px;
     box-shadow: 0 0 5px #bec6cf;
 
     @media(max-width: @tablet-breakpoint) {
-      width: 100%;
+      width: 80vw;
+      max-width: unset;
     }
 
     @media(max-width: @mobile-breakpoint) {
@@ -45,8 +46,8 @@ html {
 
     p {
       font-weight: 300;
-      font-size: 1.1em;
-      line-height: 1.4;
+      font-size: 1em;
+      line-height: 1.6;
     }
   }
 }

@@ -30,8 +30,8 @@ black = "*"
 isort = "*"
 gunicorn = "*"
 flask-sock = "*"
-flake8 = "7.1.1"
-loguru = "^0.7.2"
+flake8 = "*"
+loguru = "*"
 
 [tool.poetry.scripts]
 run = "wsgi:app"

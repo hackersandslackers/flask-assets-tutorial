@@ -11,8 +11,8 @@ nav {
   }
 }
 nav .nav-wrapper {
-  width: 915px;
-  max-width: 80vw;
+  width: 650px;
+  max-width: 85vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@ nav .nav-wrapper .left-nav img {
   margin-right: 20px;
 }
 nav .nav-wrapper .left-nav a {
-  margin-right: 20px;
+  margin-right: 30px;
   font-weight: 400;
 }
 nav a {
@@ -57,9 +57,9 @@ html {
 }
 body .container,
 html .container {
-  width: 850px;
-  max-width: 80vw;
-  min-height: 100%;
+  width: 590px;
+  max-width: 590px;
+  height: 70%;
   background: white;
   margin: 40px auto 0;
   padding: 40px;
@@ -68,7 +68,8 @@ html .container {
 @media (max-width: 800px) {
   body .container,
   html .container {
-    width: 100%;
+    width: 80vw;
+    max-width: unset;
   }
 }
 @media (max-width: 600px) {
@@ -96,8 +97,8 @@ html .container h1 {
 body .container p,
 html .container p {
   font-weight: 300;
-  font-size: 1.1em;
-  line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.6;
 }
 ul {
   list-style: none;
@@ -138,7 +139,7 @@ nav {
   }
 }
 nav .nav-wrapper {
-  width: 915px;
+  width: 650px;
   max-width: 85vw;
   display: flex;
   justify-content: space-between;
@@ -161,7 +162,7 @@ nav .nav-wrapper .left-nav img {
   margin-right: 20px;
 }
 nav .nav-wrapper .left-nav a {
-  margin-right: 20px;
+  margin-right: 30px;
   font-weight: 400;
 }
 nav a {
